@@ -2,367 +2,349 @@
 <html lang="zh">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-    <title>我的简历</title>
-    <style>* {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>我的简历</title>
+  <style>* {
+          box-sizing: border-box;
+      }
 
-        body {
-            background: #eee;
-            margin: 20px 0;
-            color: #333;
-        }
+      body {
+          background: #eee;
+          margin: 20px 0;
+          color: #333;
+      }
 
-        article {
-            width: 21cm;
-            min-height: 29.7cm;
-            background: white;
-            margin: 0 auto;
-            overflow: auto;
-            padding: 1em;
-        }</style>
-    <style media="print">body {
-            margin: 0;
-        }
+      article {
+          width: 21cm;
+          min-height: 29.7cm;
+          background: white;
+          margin: 0 auto;
+          overflow: auto;
+          padding: 1em;
+      }</style>
+  <style media="print">body {
+          margin: 0;
+      }
 
-        .page2 {
-            page-break-before: always;
-            margin-top: 30px;
-        }</style>
-    <style>body {
-        }
+      .page2 {
+          page-break-before: always;
+          margin-top: 30px;
+      }</style>
+  <style>body {
+      }
 
-        p {
-            margin: .3em 0;
-        }
+      p {
+          margin: .3em 0;
+      }
 
-        h1 {
-            font-size: 28px;
-            /*margin-top: 0;*/
-            margin: 15px 0 15px 0;
-        }
+      h1 {
+          font-size: 28px;
+          /*margin-top: 0;*/
+          margin: 15px 0 15px 0;
+      }
 
-        h2 {
-            font-size: 23px;
-            color: #333;
-        }
+      h2 {
+          font-size: 23px;
+          color: #333;
+      }
 
-        h4,
-        h5,
-        h6 {
-            font-weight: normal;
-        }
+      h4,
+      h5,
+      h6 {
+          font-weight: normal;
+      }
 
-        ol,
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+      ol,
+      ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
 
-        strong {
-            font-weight: normal;
-            color: #f60;
-        }
+      strong {
+          font-weight: normal;
+          color: #f60;
+      }
 
-        a {
-            color: rgb(106, 171, 158);
-            text-decoration: none;
-        }
+      a {
+          color: rgb(106, 171, 158);
+          text-decoration: none;
+      }
 
-        p,
-        li {
-            color: #4d4d4d;
-        }
+      p,
+      li {
+          color: #4d4d4d;
+      }
 
-        strong {
-            font-weight: normal;
-        }
+      strong {
+          font-weight: normal;
+      }
 
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0;
-        }
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin: 0;
+      }
 
-        hr {
-            background: #4d4d4d;
-            opacity: 0.5;
-        }
+      hr {
+          background: #4d4d4d;
+          opacity: 0.5;
+      }
 
-        .bio {
-            position: relative;
-        }
+      .bio {
+          position: relative;
+      }
 
-        .bio img {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }</style>
+      .bio img {
+          position: absolute;
+          top: 0;
+          right: 0;
+      }</style>
 
-    <style>.projects {
-        }
+  <style>.projects {
+      }
 
-        .projects p {
-            color: #4d4d4d;
-        }
+      .projects p {
+          color: #4d4d4d;
+      }
 
-        .projects strong {
-            color: #f60;
-        }
+      .projects strong {
+          color: #f60;
+      }
 
-        .projects > ol {
-            margin-top: 0;
-            list-style-position: inside;
-            padding: 0;
-        }
+      .projects > ol {
+          margin-top: 0;
+          list-style-position: inside;
+          padding: 0;
+      }
 
-        .projects > ol > li {
-            margin-bottom: 12px;
-        }
+      .projects > ol > li {
+          margin-bottom: 12px;
+      }
 
-        .projects > ol > li > header {
-            display: flex;
-            justify-content: space-between;
-        }
+      .projects > ol > li > header {
+          display: flex;
+          justify-content: space-between;
+      }
 
-        .projects > ol > li h3 {
-            display: inline-block;
-        }</style>
-    <style>.skills {
-        }
+      .projects > ol > li h3 {
+          display: inline-block;
+      }</style>
+  <style>.skills {
+      }
 
-        #skills {
+      #skills {
 
-            width: 500px;
-            height: 270px;
-        }
+          width: 500px;
+          height: 270px;
+      }
 
-        @media print {
-            #skills {
-                display: none;
-            }
-        }
-
-
-        .skills > .wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .skills > .wrapper > :first-child {
-            margin-right: 24px;
-        }
-
-        .skills > .wrapper > #skills {
-        }
-
-        .skills > .wrapper > ul {
-            color: #4d4d4d;
-        }
-
-        .skills > .wrapper strong {
-            color: #f60;
-        }
-
-        .skills > .wrapper > ul > li {
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
-
-        .img {
-
-        }</style>
-    <style>.openSource {
-        }
-
-        .openSource > h2 {
-        }
-
-        .openSource header img {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        .openSource > ul {
-        }
-
-        .openSource > ul > li {
-            margin-bottom: 24px;
-        }
-
-        .openSource header {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .openSource h3 {
-        }
-
-        .projects .img {
-            text-align: center;
-        }</style>
+      @media print {
+          #skills {
+              display: none;
+          }
+      }
 
 
-    <style>@media (max-width: 500px) {
-            body {
-                margin: 0;
-            }
+      .skills > .wrapper {
+          display: flex;
+          justify-content: space-between;
+      }
 
-            article {
-                width: auto;
-                height: auto;
-            }
+      .skills > .wrapper > :first-child {
+          margin-right: 24px;
+      }
 
-            .bio img {
-                display: none;
-            }
+      .skills > .wrapper > #skills {
+      }
 
-            .skills .wrapper {
-                flex-direction: column;
-            }
+      .skills > .wrapper > ul {
+          color: #4d4d4d;
+      }
 
-            #skills {
-                width: auto;
-            }
+      .skills > .wrapper strong {
+          color: #f60;
+      }
 
-            .jobs header {
-                flex-direction: column;
-            }
+      .skills > .wrapper > ul > li {
+          line-height: 1.2;
+          margin-bottom: 8px;
+      }
 
-            .jobs header > h3,
-            .jobs header > h4,
-            .jobs header > span {
-                margin: 0;
-            }
-        }</style>
+      .img {
+
+      }</style>
+  <style>.openSource {
+      }
+
+      .openSource > h2 {
+      }
+
+      .openSource header img {
+          position: absolute;
+          top: 0;
+          right: 0;
+      }
+
+      .openSource > ul {
+      }
+
+      .openSource > ul > li {
+          margin-bottom: 24px;
+      }
+
+      .openSource header {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+      }
+
+      .openSource h3 {
+      }
+
+      .projects .img {
+          text-align: center;
+      }</style>
+
+
+  <style>@media (max-width: 500px) {
+          body {
+              margin: 0;
+          }
+
+          article {
+              width: auto;
+              height: auto;
+          }
+
+          .bio img {
+              display: none;
+          }
+
+          .skills .wrapper {
+              flex-direction: column;
+          }
+
+          #skills {
+              width: auto;
+          }
+
+          .jobs header {
+              flex-direction: column;
+          }
+
+          .jobs header > h3,
+          .jobs header > h4,
+          .jobs header > span {
+              margin: 0;
+          }
+      }</style>
 </head>
 
 <body>
 <article>
-    <section class="bio">
-        <h1>个人信息</h1>
-        <img src="/cv.d1e9739e.jpg" alt="" width="147" height="201">
-        <p>邓渝航</p>
-        <p>本科 / 计算机科学与技术</p>
-        <p>手机 / 微信：17783582773</p>
-        <p>邮箱：<a href="mailto:crush_mar@163.com">crush_mar@163.com</a></p>
-        <p>技术博客：
-            <a href="https://juejin.cn/user/1337440720402798/posts">掘金—https://juejin.cn/user/1337440720402798/posts</a>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://www.yuque.com/u12556971">语雀—https://www.yuque.com/u12556971</a>
+  <section class="bio">
+    <h1>个人信息</h1>
+    <img src="/cv.d1e9739e.jpg" alt="" width="147" height="201">
+    <p>邓渝航</p>
+    <p>本科 / 计算机科学与技术</p>
+    <p>手机 / 微信：17783582773</p>
+    <p>邮箱：<a href="mailto:crush_mar@163.com">crush_mar@163.com</a></p>
+    <p>技术博客：
+      <a href="https://juejin.cn/user/1337440720402798/posts">掘金—https://juejin.cn/user/1337440720402798/posts</a>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.yuque.com/u12556971">语雀—https://www.yuque.com/u12556971</a>
+    </p>
+    <p>GitHub：<a href="https://github.com/crush394">https://github.com/crush394</a></p>
+  </section>
+
+  <section class="skills">
+    <h1>技能</h1>
+    <div class="wrapper">
+      <ul>
+        <li>能够使用 HTML5 标签编写<strong>语义化</strong>的页面</li>
+        <li>熟悉使用 CSS/SCSS，<strong>文档流</strong>，<strong>盒模型</strong>，flex/grid 布局定位</li>
+        <li>掌握
+          JavaScript，ES6+语法，DOM操作，BOM，Ajax，JSONP，跨域，闭包，<strong>原型链</strong>，<strong>this</strong>，面向对象，Promise，<strong>TypeScript</strong>
+          的使用
+        </li>
+        <li>掌握 <strong>Vue</strong> / <strong>Vuex</strong> / <strong>Vue-router</strong> 的使用</li>
+        <li> 有 node.js 的使用经验</li>
+        <li> 了解 Webpack 配置，npm 包管理机制</li>
+        <li> 掌握 Git/GitHub 工作部署流程</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="projects">
+    <h1>开源项目及作品</h1>
+
+    <ol>
+      <li>
+        <h2>极简记账</h2>
+        <hr>
+        <h3>扫描二维码预览：</h3>
+        <p class="img">
+          <img src="/money.ab6d3130.png" alt="" width="200">
         </p>
-        <p>GitHub：<a href="https://github.com/crush394">https://github.com/crush394</a></p>
-    </section>
-
-    <section class="skills">
-        <h1>技能</h1>
-        <div class="wrapper">
-            <ul>
-                <li>能够使用 HTML5 标签编写<strong>语义化</strong>的页面</li>
-                <li>熟悉使用 CSS/SCSS，<strong>文档流</strong>，<strong>盒模型</strong>，flex/grid 布局定位</li>
-                <li>掌握
-                    JavaScript，ES6+语法，DOM操作，BOM，Ajax，JSONP，跨域，闭包，<strong>原型链</strong>，<strong>this</strong>，面向对象，Promise，<strong>TypeScript</strong>
-                    的使用
-                </li>
-                <li>掌握 <strong>Vue</strong> / <strong>Vuex</strong> / <strong>Vue-router</strong> 的使用</li>
-                <li>掌握 <strong>React</strong> / <strong>Redux</strong> / <strong>react-redux</strong> /
-                    <strong>React-Router</strong> / <strong>Hooks API </strong>的使用
-                </li>
-                <li> 有 node.js 的使用经验</li>
-                <li> 了解 Webpack 配置，npm 包管理机制</li>
-                <li> 掌握 Git/GitHub 工作部署流程</li>
-            </ul>
-        </div>
-    </section>
-
-
-    <section class="projects">
-        <h1>开源项目及作品</h1>
-
-        <ol>
-            <li>
-                <h2>极简记账</h2>
-                <hr>
-                <h3>扫描二维码预览：</h3>
-                <p class="img">
-                    <img src="/qrcode.87459425.png" alt="" width="200">
-                </p>
-                <h3>使用技术</h3>
-                <p>
-                    Vue、TypeScript、Vue Cli、Vue Router、Vuex
-                </p>
-            </li>
-            <li>
-                <h3>项目概述</h3>
-                <p>
-                    本应用使用了Vue-router划分了三个分页面：记账、标签、统计，实现了复杂信息保存、标签管理，数据统计展示等主要功能，使用Vuex+Localstorage实现状态管理，记录了所有对记账的增删改查的记录，使用day.js实现时间管理。
-                </p>
-            </li>
-            <li>
+        <h3>使用技术</h3>
+        <p>
+          Vue、TypeScript、Vue Cli、Vue Router、Vuex
+        </p>
+      </li>
+      <li>
+        <h3>项目概述</h3>
+        <p>
+          本应用使用了Vue-router划分了三个分页面：记账、标签、统计，实现了复杂信息保存、标签管理，数据统计展示等主要功能，使用Vuex+Localstorage实现状态管理，记录了所有对记账的增删改查的记录，使用day.js实现时间管理。
+        </p>
+      </li>
+      <li>
         <span>
             <a href="https://gitee.com/crush_March/money">源码链接</a>
             <a href="http://crush_march.gitee.io/money-website/#/money">项目预览</a>
         </span>
-            </li>
-
-            <span>
-        <li>
-          <h2>极简记账</h2>
-          <hr>
-          <h3>使用技术</h3>
-          <p>
-            Vue、TypeScript、Vue Cli、Vue Router、Vuex
-          </p>
-        </li>
-        <li>
-          <h3>项目概述</h3>
-          <p>
-            Vue、TypeScript、Vue Cli、Vue Router、Vuex
-          </p>
-        </li>
-        <li>
-          <h3>主要工作</h3>
-          <p>
-            1111111111
-          </p>
-          <p>
-            1111111111
-          </p>
-          <p>
-            1111111111
-          </p>
-        </li>
-        <li>
-        <span>
-            <a href="#">源码链接</a>
-            <a href="#">项目预览</a>
-        </span>
-        </li>
-      </span>
+      </li>
 
 
-            <li>
-                <h2>画一个皮卡丘-纯CSS绘制皮卡丘</h2>
-                <hr>
-                <img src="" alt="">
-                <h3>项目描述</h3>
-                <p>
-                    大量使用了伪元素、CSS、Animation、绝对、相对定位
-                </p>
-            </li>
-            <li>
-                <a href="#">源码链接</a>
-                <a href="#">项目预览</a>
-            </li>
+      <li>
+        <h2>前端导航站点</h2>
+        <hr>
+        <h3>扫描二维码预览：</h3>
+        <p class="img">
+          <img src="/nav.19a98149.png" alt="" width="200">
+        </p>
+        <h3>项目描述</h3>
+        <p>
+          使用了CSS进行布局，用hashMap和localStorage来存储用户的数据
+        </p>
+      </li>
+      <li>
+        <a href="https://gitee.com/crush_March/nav">源码链接</a>
+        <a href="http://crush_march.gitee.io/nav/dist/">项目预览</a>
+      </li>
 
-        </ol>
-    </section>
+
+      <li>
+        <h2>画一个皮卡丘-纯CSS绘制皮卡丘</h2>
+        <hr>
+        <p class="img">
+          <img src="/pikachu.073815eb.jpg" alt="" width="600">
+        </p>
+        <h3>项目描述</h3>
+        <p>
+          大量使用了伪元素、CSS、Animation、绝对、相对定位
+        </p>
+      </li>
+      <li>
+        <a href="https://gitee.com/crush_March/pikachu">源码链接</a>
+        <a href="http://crush_march.gitee.io/pikachu/dist/test.html">项目预览</a>
+      </li>
+
+    </ol>
+  </section>
 
 </article>
 <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts.min.js"></script>
